@@ -1,0 +1,37 @@
+body{
+    background-image: linear-gradient(to right, white, lightblue,skyblue);
+    font-family: 'Cinzel Decorative';font-size: 22px;
+    text-shadow: wheat 2px 2px 3px;
+
+}
+.container{
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 3%;
+}
+.inputForm{
+    border: 2px solid rgb(53, 21, 88);
+    border-radius: 15px;
+    box-shadow: azure 2px 2px 5px;
+
+    margin: auto;
+    text-align: center;
+    width: 400px;
+    padding: 2%;
+}
+.personsContainer{
+    text-align: center;
+}
+.personDetails{
+    border: 1px solid rgb(53, 21, 88);
+    border-radius: 15px;
+    box-shadow: azure 2px 2px 5px;
+
+
+    margin: auto;
+    padding: 15px;
+    width: 300px;
+}
+.floatRight{
+    float: right;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Crud App</title>
+    <link rel="stylesheet" href="/abu.css">
+    <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+
+
+</head>
+<body>
+    <div class="container main">
+        <div class="inputForm">
+            <form action="/add" method="POST">
+                <h1>Please Enter Your Details</h1>
+                <input type="text" name="name" placeholder="Your Name" />
+                <input type="number" name="age" placeholder="Your Age" />
+                <button>Submit</button>
+            </form>
+        </div>
+        <div class="personsContainer">
+            <h1> Newly Added Persons</h1>
+           <% if(allData.length === 0){ %>
+                <h3>No Data Found</h3>
+            <% }else{ %> <% allData.forEach( (data) => { %>
+                <div class="personDetails">
+                    <h3> Name: <%= data.name %> </h3>
+                    <p> Age: <%= data.age %> </p>
+                    <form action="/update/<%= data._id %>" method="GET">
+                        <button>Edit</button>
+                    </form>
+                    <form action="/delete/<%= data._id %>?_method=DELETE" method="POST">
+                        <button>Delete</button>
+                    </form>
+                </div>
+
+           <% }) %>
+
+           <% } %>
+        </div>
+
+    </div>
+    
+</body>
+</html>

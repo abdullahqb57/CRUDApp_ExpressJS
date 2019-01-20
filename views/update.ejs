@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Crud App</title>
+    <link rel="stylesheet" href="/abu.css">
+    <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+
+
+</head>
+<body>
+    <div class="inputForm">
+        <form action="/update/<%=d._id%>?_method=PUT" method="POST">
+            <h1>Please Enter Your Name</h1>
+            <input type="text" name="name" placeholder="Name" value= <%=d.name %> >
+            <input type="number" name="age" placeholder="Age" value= <%= d.age %> >
+            <button>Submit</button>
+        </form>
+    </div> 
+</body>
+</html>
